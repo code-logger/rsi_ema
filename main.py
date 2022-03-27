@@ -12,7 +12,7 @@ client = Client(API_KEY, API_SECRET)
 
 
 def get_quan(): # get price quantity 
-    return client.get_symbol_ticker(symbol=SYMBOL)['price']
+    return float(client.get_symbol_ticker(symbol=SYMBOL)['price'])
 
 
 # custom function for rouding down value 
